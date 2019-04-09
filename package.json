@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/Apple-yong/QQ-Music/issues"
   },
-  "homepage": "https://github.com/Apple-yong/QQ-Music#readme"
+  "homepage": "https://github.com/Apple-yong/QQ-Music#readme",
+  "dependencies": {}
 }
