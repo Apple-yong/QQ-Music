@@ -36,12 +36,41 @@ h1 {
       text-decoration: none;
       color: black; }
 
-.swiper-container img {
+#slider .swiper-container img {
   width: 100%; }
 
-.swiper-container .swiper-pagination-bullet-active {
+#slider .swiper-container .swiper-pagination-bullet-active {
   opacity: 1;
   background: white; }
+
+#navbar {
+  display: -webkit-box;
+  background-color: white; }
+  #navbar a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    -webkit-box-flex: 1;
+    position: relative;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px; }
+  #navbar a.current {
+    color: #31c27c; }
+  #navbar a.current:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #31c27c; }
+
+.hide {
+  display: none; }
 
 body {
   background: #f4f4f4; }

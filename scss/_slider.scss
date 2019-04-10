@@ -1,0 +1,12 @@
+#slider{
+    .swiper-container{
+        img{
+            width: 100%;
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: white;
+        }
+    }
+}
+
