@@ -16,6 +16,17 @@
             src: "images/1222968.jpg",
         },
     ]
+    
+    
+    fetch(`/json/rec.json`,{
+        method: 'GET'
+    }).then(res => res.text()).then(
+        data => {
+            text = data
+        }
+    )
+    
+
     var cent = document.querySelector(".swiper-wrapper");
     for(var i = 0; i < sliderlist.length; i++) {
     cent.innerHTML += `
