@@ -1,5 +1,5 @@
-// 原生JS
-// 点击获取此元素
+//原生JS
+//点击获取此元素
 // document.addEventListener('click',function(event){
 //     let target = event.target
 //     if(target.dataset.role === 'tab'){
@@ -50,7 +50,7 @@ navbar_all.each(function(index, item) {
 
 //     }
 // })
-// // 原生JS获取this之外的其他元素，等价于jquery的siblings
+// 原生JS获取this之外的其他元素，等价于jquery的siblings
 // function getSiblings(n) {
 //     return getChildren(n.parentNode.firstChild, n);
 //     function getChildren(n, skipMe){
