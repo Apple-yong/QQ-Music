@@ -1,5 +1,5 @@
 .radios, .hotMusic{
-    margin: 14px 2% 11px 2%;
+    margin: 14px 0px 11px 10px;
     .title{
         color: #000;
         font-size: 16px;
@@ -7,13 +7,13 @@
         font-weight: 400;
     }
     .radios_list{
-        overflow: hidden;
-        margin-right: -8px;
+        display: flex;
+        flex-wrap: wrap;
         .list_main{
-            float: left;
-            width: 48%;
+            flex: 1;
+            flex-basis: 40%;
             -webkit-box-sizing: border-box;
-            margin-right: 2%;
+            margin-right: 10px;
             margin-bottom: 10px;
             overflow: hidden;
             background-color: white;
