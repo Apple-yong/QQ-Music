@@ -73,6 +73,52 @@ h1 {
 .hide {
   display: none; }
 
+.radios {
+  margin: 14px 0px 11px 10px; }
+  .radios .title {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 11px;
+    font-weight: 400; }
+  .radios .list {
+    display: flex;
+    flex-wrap: wrap; }
+    .radios .list .list_main {
+      flex: 1;
+      margin-right: 8px;
+      background-color: white; }
+      .radios .list .list_main .list_media {
+        position: relative;
+        margin-bottom: 5px; }
+        .radios .list .list_main .list_media img {
+          display: block;
+          width: 100%; }
+        .radios .list .list_main .list_media .icon_play {
+          background-image: url(../images/list_sprite.png);
+          background-repeat: no-repeat;
+          background-size: 24px 60px;
+          height: 24px;
+          bottom: 5px;
+          right: 5px;
+          width: 24px;
+          background-position: 0 0;
+          position: absolute;
+          display: block;
+          z-index: 10; }
+      .radios .list .list_main .list_info {
+        padding: 0 7px 5px;
+        color: #000; }
+        .radios .list .list_main .list_info .list_tit {
+          height: 36px;
+          line-height: 18px;
+          white-space: normal;
+          word-wrap: break-word;
+          font-size: 14px;
+          font-weight: 400;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0; }
+
 body {
   background: #f4f4f4; }
   body .wrap {
