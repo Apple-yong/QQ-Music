@@ -29,7 +29,7 @@
       cent.innerHTML += `
         <div class="list_main">
             <div class="list_media">
-                <img class="video_list__media_img" src="${radios[i].picUrl}" alt="热歌">
+                <img class="lazyload video_list__media_img" data-original="${radios[i].picUrl}" alt="热歌">
                 <span class="icon icon_play"></span>
             </div>
             <div class="list_info"><h3 class="list_tit tit_two_row">${radios[i].Ftitle}</h3></div>
@@ -45,7 +45,7 @@
       cent.innerHTML += `
         <div class="list_main">
             <div class="list_media">
-                <img class="video_list__media_img" src="${hotmusic[i].picUrl}" alt="热歌">
+                <img class="lazyload video_list__media_img" data-original="${hotmusic[i].picUrl}" alt="热歌">
                 <span class="icon icon_play"></span>
             </div>
             <div class="list_info"><h3 class="list_tit tit_two_row">${hotmusic[i].songListDesc}</h3></div>
