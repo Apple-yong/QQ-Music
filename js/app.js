@@ -41,17 +41,27 @@
     // 渲染热门歌单
     function renderHotList(hotmusic) {
       var cent = document.querySelector("#hot_list");
+      let accessnum,songListDesc
       for(var i = 0; i < hotmusic.length; i++) {
+      accessnum = listenNumber(hotmusic[i].accessnum)
       cent.innerHTML += `
         <div class="list_main">
             <div class="list_media">
                 <img class="lazyload video_list__media_img" data-original="${hotmusic[i].picUrl}" alt="热歌">
+                <span class="listen_count"><i class="icon icon_listen"></i>${accessnum}</span>
                 <span class="icon icon_play"></span>
             </div>
-            <div class="list_info"><h3 class="list_tit tit_two_row">${hotmusic[i].songListDesc}</h3></div>
+            <div class="list_info">
+              <h3 class="list_tit tit_two_row">${hotmusic[i].songListDesc}</h3>
+              <p class="list_text">${hotmusic[i].songListAuthor}</p>
+            </div>
         </div>
           `
       }
+    }
+    function listenNumber(number){
+      number = number / 10000
+      return(number.toFixed(1) + '万')
     }
     
     // 轮播图列表渲染
