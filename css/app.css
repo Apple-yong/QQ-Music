@@ -73,27 +73,31 @@ h1 {
 .hide {
   display: none; }
 
-.radios {
-  margin: 14px 0px 11px 10px; }
-  .radios .title {
+.radios, .hotMusic {
+  margin: 14px 2% 11px 2%; }
+  .radios .title, .hotMusic .title {
     color: #000;
     font-size: 16px;
     margin-bottom: 11px;
     font-weight: 400; }
-  .radios .list {
-    display: flex;
-    flex-wrap: wrap; }
-    .radios .list .list_main {
-      flex: 1;
-      margin-right: 8px;
+  .radios .radios_list, .hotMusic .radios_list {
+    overflow: hidden;
+    margin-right: -8px; }
+    .radios .radios_list .list_main, .hotMusic .radios_list .list_main {
+      float: left;
+      width: 48%;
+      -webkit-box-sizing: border-box;
+      margin-right: 2%;
+      margin-bottom: 10px;
+      overflow: hidden;
       background-color: white; }
-      .radios .list .list_main .list_media {
+      .radios .radios_list .list_main .list_media, .hotMusic .radios_list .list_main .list_media {
         position: relative;
         margin-bottom: 5px; }
-        .radios .list .list_main .list_media img {
+        .radios .radios_list .list_main .list_media img, .hotMusic .radios_list .list_main .list_media img {
           display: block;
           width: 100%; }
-        .radios .list .list_main .list_media .icon_play {
+        .radios .radios_list .list_main .list_media .icon_play, .hotMusic .radios_list .list_main .list_media .icon_play {
           background-image: url(../images/list_sprite.png);
           background-repeat: no-repeat;
           background-size: 24px 60px;
@@ -105,10 +109,10 @@ h1 {
           position: absolute;
           display: block;
           z-index: 10; }
-      .radios .list .list_main .list_info {
+      .radios .radios_list .list_main .list_info, .hotMusic .radios_list .list_main .list_info {
         padding: 0 7px 5px;
         color: #000; }
-        .radios .list .list_main .list_info .list_tit {
+        .radios .radios_list .list_main .list_info .list_tit, .hotMusic .radios_list .list_main .list_info .list_tit {
           height: 36px;
           line-height: 18px;
           white-space: normal;
