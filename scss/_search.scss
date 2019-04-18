@@ -48,13 +48,28 @@
                     text-indent: -9999px;
                     border-radius: 99px;
                 }
-            }
-            .search_bar_tip_text {
-                padding-right: 10px;
-                padding-left: 10px;
-                font-size: 14px;
-                height: 36px;
-                line-height: 36px;
+                .icon_delete::after {
+                    width: 2px;
+                    height: 10px;
+                    margin-left: -1px;
+                    margin-top: -5px;
+                }
+                .icon_delete::before {
+                    width: 10px;
+                    height: 2px;
+                    margin-left: -5px;
+                    margin-top: -1px;
+                }
+                .icon_delete::before,.icon_delete::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 8px;
+                    background: #fff;
+                    transform: rotate(45deg);
+                }
             }
         }  
     }
