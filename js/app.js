@@ -78,7 +78,7 @@
         <li class="topic_item">
             <div class="topic_main">
                 <a href="javascript:;" class="topic_media">
-                    <img src="${item.picUrl}">
+                    <img class="lazyload" data-original="${item.picUrl}">
                     <span class="listen_count"><i class="icon icon_listen"></i>${listenCount}万</span>
                 </a>
                 <div class="topic_info">
