@@ -73,13 +73,12 @@
     function renderTopList(list) {
       let listenCount  
       document.querySelector("#rank-view-list").innerHTML = list.map(item =>
-        //listenCount = listenNumber(item.listenCount)
         `
         <li class="topic_item">
             <div class="topic_main">
                 <a href="javascript:;" class="topic_media">
                     <img class="lazyload" data-original="${item.picUrl}">
-                    <span class="listen_count"><i class="icon icon_listen"></i>${listenCount}万</span>
+                    <span class="listen_count"><i class="icon icon_listen"></i>${listenNumber(item.listenCount)}万</span>
                 </a>
                 <div class="topic_info">
                     <div class="topic_cont">
@@ -100,7 +99,7 @@
       }
       function listenNumber(number){
         number = number / 10000
-        return(number.toFixed(1) + '万')
+        return(number.toFixed(1))
       }
     }
 
