@@ -1,7 +1,12 @@
 (function(){
   fetch('/json/rec.json')
-      .then(res => res.json())
-      .then(render)
+    .then(res => res.json())
+    .then(render)
+
+  fetch('/json/rank.json')
+    .then(res => res.json())
+    .then(json => json.data.topList)
+    .then(renderTopList)
 
     function render(json){
       renderSlider(json.data.slider)
@@ -63,6 +68,42 @@
       number = number / 10000
       return(number.toFixed(1) + '万')
     }
+
+
+    function renderTopList(list) {
+      let listenCount  
+      document.querySelector("#rank-view-list").innerHTML = list.map(item =>
+        //listenCount = listenNumber(item.listenCount)
+        `
+        <li class="topic_item">
+            <div class="topic_main">
+                <a href="javascript:;" class="topic_media">
+                    <img src="${item.picUrl}">
+                    <span class="listen_count"><i class="icon icon_listen"></i>${listenCount}万</span>
+                </a>
+                <div class="topic_info">
+                    <div class="topic_cont">
+                        <h3 class="topic_tit">${item.topTitle}</h3>
+                        ${songList(item.songList)}
+                    </div>
+                    <i class="topic_arrow"></i>
+                </div>
+            </div>
+        </li>`).join('')
+      
+      function songList(songs){
+        return songs.map((song, i) =>
+          `
+          <p>${i + 1}<span class="text_name">${song.songname}</span>- ${song.singername}</p>
+          `
+        ).join('')
+      }
+      function listenNumber(number){
+        number = number / 10000
+        return(number.toFixed(1) + '万')
+      }
+    }
+
     
     // 轮播图列表渲染
     // var sliderlist = [{

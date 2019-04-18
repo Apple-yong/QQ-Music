@@ -1,0 +1,85 @@
+.rank-view{
+    .mod_topic{
+        margin: 10px;
+        padding-bottom: 55px;
+        li {
+            margin-bottom: 10px;
+            overflow: hidden;
+            .topic_main {
+                display: -webkit-box;
+                background: #fff;
+                .topic_media {
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    img {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                    }
+                    .listen_count {
+                        left: 5px;
+                        bottom: 7px;
+                        line-height: 12px;
+                        color: #fff;
+                        opacity: .6;
+                        font-size: 9px;
+                        z-index: 10;
+                        .icon_listen {
+                            display: block;
+                            float: left;
+                            width: 10px;
+                            height: 10px;
+                            background-position: 0 -50px;
+                            margin-right: 3px;
+                        }
+                    }
+                }
+                .topic_info {
+                    position: relative;
+                    -webkit-box-flex: 1;
+                    display: -webkit-box;
+                    -webkit-box-align: center;
+                    -webkit-box-pack: center;
+                    .topic_cont {
+                        -webkit-box-flex: 1;
+                        margin: 0 10px 0 15px;
+                        .topic_tit {
+                            font-size: 16px;
+                            color: #000;
+                            font-weight: 400;
+                            margin-bottom: 5px;
+                            white-space: nowrap;
+                        }
+                        p {
+                            font-size: 14px;
+                            line-height: 1.5;
+                            color: rgba(0,0,0,.5);
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            .text_name {
+                                color: #000;
+                                margin-left: 8px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    .topic_arrow {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        margin-top: -4px;
+                        width: 6px;
+                        height: 6px;
+                        border-right: 1px solid #b2b2b2;
+                        border-bottom: 1px solid #b2b2b2;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            
+        }
+    }
+}
