@@ -14,6 +14,7 @@ class Search {
   }
 
   onKeyUp(event) {
+    console.log(this)
     let keyword = event.target.value.trim()
     if (!keyword) return this.reset()
     if (event.key !== 'Enter') return

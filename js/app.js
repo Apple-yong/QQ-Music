@@ -14,6 +14,8 @@
       renderHotList(json.data.songList)
     }
 
+    let search = new Search(document.querySelector('#search-view'))
+
     // 渲染轮播图
     function renderSlider(slides) {
       // slides = slides.map(slide => {
