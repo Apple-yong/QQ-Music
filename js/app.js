@@ -92,7 +92,7 @@
               </div>
           </div>
       </li>`).join('')
-
+      $("img.lazyload").lazyload();
       
       function songList(songs){
         return songs.map((song, i) =>
