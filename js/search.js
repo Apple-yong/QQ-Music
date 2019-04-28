@@ -14,7 +14,6 @@ class Search {
   }
 
   onKeyUp(event) {
-    console.log(this)
     let keyword = event.target.value.trim()
     if (!keyword) return this.reset()
     if (event.key !== 'Enter') return
@@ -41,7 +40,7 @@ class Search {
     if (this.keyword !== keyword) this.reset()
     this.keyword = keyword
     this.loading()
-    fetch(`http://localhost:4000/search?keyword=${this.keyword}&page=${page || this.page}`)
+    fetch(`https://qq-music-api.now.sh/search?keyword=${this.keyword}&page=${page || this.page}`)
       .then(res => res.json())
       .then(json => {
         this.page = json.data.song.curpage

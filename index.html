@@ -56,17 +56,19 @@
                 </div>
             </div>
             <div id="search-view" class="search-view tab-content hide">
-                <div class="search_box">
-                    <div class="mod_search_bar">
-                        <div class="search_bar_cont">
-                            <form method="get" action="#">
-                                <input id="search" class="search_input" type="search" autocomplete="off" autocorrect="off"
-                                placeholder="搜索歌曲、歌单、专辑" style="-webkit-appearance: textfield;">
-                                <span class="icon icon_search">搜索</span>
-                                <span class="icon icon_delete" style="display: inline;">删除</span>
-                            </form>
-                        </div>
-                    </div>
+                <div class="search-bar">
+                  <div class="input-wrap">
+                    <input id="search" type="text" placeholder="搜索歌曲、歌单、专辑">
+                    <span class="icon-search"></span>
+                  </div>
+                </div>
+                <div class="search-results">
+                  <ul class="song-list"></ul>
+                </div>
+                <div class="search-loading">
+                  <i class="loading-icon"></i>
+                  <div class="loading-text">正在载入更多...</div>
+                  <div class="loading-done hide">已加载全部</div>
                 </div>
             </div>
         </div>
@@ -83,6 +85,4 @@
 <script src="js/tab.js"></script>
 <script src="js/search.js"></script>
 <script src="js/app.js"></script>
-<script>
-    $("img.lazyload").lazyload();
-</script>
+

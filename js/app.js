@@ -12,6 +12,7 @@
       renderSlider(json.data.slider)
       renderRadioList(json.data.radioList)
       renderHotList(json.data.songList)
+      $("img.lazyload").lazyload();
     }
 
     let search = new Search(document.querySelector('#search-view'))
@@ -75,22 +76,23 @@
     function renderTopList(list) {
       let listenCount  
       document.querySelector("#rank-view-list").innerHTML = list.map(item =>
-        `
-        <li class="topic_item">
-            <div class="topic_main">
-                <a href="javascript:;" class="topic_media">
-                    <img class="lazyload" data-original="${item.picUrl}">
-                    <span class="listen_count"><i class="icon icon_listen"></i>${listenNumber(item.listenCount)}万</span>
-                </a>
-                <div class="topic_info">
-                    <div class="topic_cont">
-                        <h3 class="topic_tit">${item.topTitle}</h3>
-                        ${songList(item.songList)}
-                    </div>
-                    <i class="topic_arrow"></i>
-                </div>
-            </div>
-        </li>`).join('')
+      `
+      <li class="topic_item">
+          <div class="topic_main">
+              <a href="javascript:;" class="topic_media">
+                  <img class="lazyload" data-original="${item.picUrl}">
+                  <span class="listen_count"><i class="icon icon_listen"></i>${listenNumber(item.listenCount)}万</span>
+              </a>
+              <div class="topic_info">
+                  <div class="topic_cont">
+                      <h3 class="topic_tit">${item.topTitle}</h3>
+                      ${songList(item.songList)}
+                  </div>
+                  <i class="topic_arrow"></i>
+              </div>
+          </div>
+      </li>`).join('')
+
       
       function songList(songs){
         return songs.map((song, i) =>
