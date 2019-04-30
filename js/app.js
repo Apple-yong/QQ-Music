@@ -12,7 +12,6 @@
       renderSlider(json.data.slider)
       renderRadioList(json.data.radioList)
       renderHotList(json.data.songList)
-      $("img.lazyload").lazyload();
     }
 
     let search = new Search(document.querySelector('#search-view'))
@@ -92,7 +91,6 @@
               </div>
           </div>
       </li>`).join('')
-      $("img.lazyload").lazyload();
       
       function songList(songs){
         return songs.map((song, i) =>
