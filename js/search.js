@@ -58,7 +58,6 @@ class Search {
   append(songs) {
     let html = songs.map(song => {
       let artist = song.singer.map(s => s.name).join(' ')
-      console.log(song)
       return `
         <a class="song-item clearfix"
            href="#player?artist=${artist}&songid=${song.songid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}&songmid=${song.songmid}">
