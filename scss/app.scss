@@ -7,10 +7,12 @@
 @import "slider";
 @import "navbar";
 @import "helper";
+@import "player";
 
 
 body {
     background: $body-background;
+    font-family: FZLTXIHJW--GB1-0, "hiragino sans gb", "Helvetica Neue", Helvetica, STHeiTi, Arial;
     .wrap{
         width: 100%;
         overflow: hidden;
