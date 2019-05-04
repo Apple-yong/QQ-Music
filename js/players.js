@@ -39,7 +39,6 @@ class MusicPlayer {
 
   play(options) {
     if (!options) return
-    console.log(options)
     this.$el.querySelector('.song-name').innerText = options.songname
     this.$el.querySelector('.song-artist').innerText = options.artist
     this.progress.reset(options.duration)

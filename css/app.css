@@ -387,10 +387,6 @@ table {
       border-radius: 25px;
       text-decoration: none; }
     #header .top_box__bd .show-player {
-      position: absolute;
-      display: inline-block;
-      right: 10px;
-      top: 8px;
       height: 28px;
       padding: 0 12px;
       line-height: 28px;
