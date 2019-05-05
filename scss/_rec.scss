@@ -1,84 +1,67 @@
-.radios, .hotMusic{
-    margin: 14px 0px 11px 10px;
-    .title{
-        color: #000;
-        font-size: 16px;
-        margin-bottom: 11px;
-        font-weight: 400;
+.radios, .playlists {
+  margin: 14px 2px 0 10px;
+  .title {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 11px;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    .list-item {
+      flex: 1;
+      flex-basis: 40%;
+      background: #fff;
+      margin-right: 8px;
+      margin-bottom: 10px;
+      .list-media {
+        position: relative;
+        margin-bottom: 5px;
+      }
+      .list-detail {
+        padding: 0 7px 5px;
+      }
+      .list-title {
+        font-size: 14px;
+      }
+      .icon {
+        background-repeat: no-repeat;
+        background-size: 24px 60px;
+        background-image: url('../images/icon_play.png');
+      }
+      .icon-play {
+        height: 24px;
+        bottom: 5px;
+        right: 5px;
+        width: 24px;
+        position: absolute;
+        background-position: 0 0;
+      }
+      img {
+        width: 100%;
+        display: block;
+        min-height: 145px;
+      }
     }
-    .radios_list{
-        display: flex;
-        flex-wrap: wrap;
-        .list_main{
-            flex: 1;
-            flex-basis: 40%;
-            -webkit-box-sizing: border-box;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            overflow: hidden;
-            background-color: white;
-            .list_media{
-                position: relative;
-                margin-bottom: 5px;
-                img{
-                    display: block;
-                    width: 100%;
-                }
-                .listen_count {
-                    left: 5px;
-                    bottom: 7px;
-                    display: block;
-                    position: absolute;
-                    z-index: 10;
-                    line-height: 12px;
-                    color: #fff;
-                    font-size: 12px;
-                    .icon_listen {
-                        background-image: url(../images/list_sprite.png);
-                        background-repeat: no-repeat;
-                        background-size: 24px 60px;
-                        display: block;
-                        float: left;
-                        width: 10px;
-                        height: 10px;
-                        background-position: 0 -50px;
-                        margin-right: 5px;
-                        margin-top: 2px;
-                    }
-                }
-                .icon_play {
-                    background-image: url(../images/list_sprite.png);
-                    background-repeat: no-repeat;
-                    background-size: 24px 60px;
-                    height: 24px;
-                    bottom: 5px;
-                    right: 5px;
-                    width: 24px;
-                    background-position: 0 0;
-                    position: absolute;
-                    display: block;
-                    z-index: 10;
-                }
-            }
-            .list_info {
-                padding: 0 7px 5px;
-                color: #000;
-                font-weight: 400;
-                line-height: 1.5;
-                .list_tit {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    font-size: 14px;
-                    
-                }
-                .list_text{
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
+  }
+}
+
+.radios .list-title {
+  height: 36px;
+}
+
+
+#rec-view .footer {
+  margin: 10px 0 22px;
+}
+
+.footer-logo {
+  display: block;
+  width: 82px;
+  height: 24px;
+  margin: 0 auto 10px;
+  background-image: url(../images/logo_footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
 }

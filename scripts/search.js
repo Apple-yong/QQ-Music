@@ -1,4 +1,6 @@
-class Search {
+import { SEARCH_URL } from './constants.js'
+
+export class Search {
   constructor(el) {
     this.$el = el
     this.$input = this.$el.querySelector('#search')
@@ -42,7 +44,7 @@ class Search {
     if (this.keyword !== keyword) this.reset()
     this.keyword = keyword
     this.loading()
-    fetch(`https://qq-music-api.now.sh/search?keyword=${this.keyword}&page=${page || this.page}`)
+    fetch(`${SEARCH_URL}?keyword=${this.keyword}&page=${page || this.page}`)
       .then(res => res.json())
       .then(json => {
         this.page = json.data.song.curpage
@@ -59,11 +61,11 @@ class Search {
     let html = songs.map(song => {
       let artist = song.singer.map(s => s.name).join(' ')
       return `
-        <a class="song-item clearfix"
+        <a class="song-item"
            href="#player?artist=${artist}&songid=${song.songid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}&songmid=${song.songmid}">
           <i class="icon icon-music"></i>
           <div class="song-name ellipsis">${song.songname}</div>
-          <div class="song-artist ellipsis">${song.singer[0].name}</div>
+          <div class="song-artist ellipsis">${artist}</div>
         </a>`}).join('')
     this.$songs.insertAdjacentHTML('beforeend', html)
   }
