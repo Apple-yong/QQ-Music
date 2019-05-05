@@ -50,7 +50,7 @@ class MusicPlayer {
     if (options.songid) {
       this.songid = options.songid
       this.songmid = options.songmid
-      this.$audio.src = `http://dl.stream.qqmusic.qq.com/C400${this.songmid}.m4a?guid=2864522040&vkey=3EE6338D992D7F4A485B4BA8468A22C6383233DB99A010823975A36ECE3B7301E06CBB96D7EFE27F6D170EB744544F27D166A928CCB6DBBC&uin=1896&fromtag=38`
+      this.$audio.src = `http://183.60.23.14/amobile.music.tc.qq.com/C400${this.songmid}.m4a?guid=7207486993&vkey=A90A46B84EAA08A3F81434C9B4411D4F423F636BFB7D06D87682874453A87548082A8052B035E4EC7644380D6C685F7965B87245EE8D90D6&uin=0&fromtag=38`
       fetch(`https://qq-music-api.now.sh/lyrics?id=${this.songid}`)
         .then(res => res.json())
         .then(json => json.lyric)
